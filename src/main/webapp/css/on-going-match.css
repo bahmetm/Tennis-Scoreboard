@@ -1,0 +1,62 @@
+main {
+    height: 350px;
+    width: 550px;
+}
+
+.point-buttons-wrapper {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.input-type {
+    border: none;
+    font-size: 18px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px 0px rgb(0, 0, 0, 0.1);
+    width: 220px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: 800;
+    color: #353535;
+}
+
+
+table {
+    width: 100%;
+}
+
+table tr {
+    height: 40px;
+}
+
+table thead:first-child {
+    height: 30px;
+    /* border-bottom: 1pt solid rgb(165, 165, 165); */
+}
+
+table th {
+    background-color:  rgb(0, 0, 0, 0.05);
+    text-align: start;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+table th, table td {
+    vertical-align: middle;
+}
+
+table td:not(table td:last-child) {
+    border-right: 1pt solid  rgb(0, 0, 0, 0.05);
+}
+
+table tr:not(table tr:last-child) {
+    border-bottom: 1pt solid  rgb(0, 0, 0, 0.05);
+}
+
+
+table p {
+    margin-left: 5px;
+    font-size: 18px;
+}
