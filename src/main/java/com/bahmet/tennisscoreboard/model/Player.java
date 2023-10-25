@@ -1,7 +1,7 @@
 package com.bahmet.tennisscoreboard.model;
 
-import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -25,4 +25,12 @@ public class Player {
 
     @OneToMany(mappedBy = "winner", cascade = CascadeType.ALL)
     private Set<Match> wonMatches = new HashSet<>();
+
+    public Player(String name) {
+        this.name = name;
+    }
+
+    public Player() {
+
+    }
 }

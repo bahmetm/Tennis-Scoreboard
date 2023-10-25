@@ -8,6 +8,7 @@ public class HibernateUtil {
 
     private static SessionFactory buildSessionFactory() {
         try {
+            Class.forName("org.h2.Driver");
             return new Configuration().configure().buildSessionFactory();
         } catch (Throwable e) {
             throw new ExceptionInInitializerError(e);
