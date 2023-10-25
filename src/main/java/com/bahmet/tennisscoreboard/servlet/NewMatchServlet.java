@@ -4,6 +4,7 @@ import com.bahmet.tennisscoreboard.model.Match;
 import com.bahmet.tennisscoreboard.service.NewMatchService;
 import com.bahmet.tennisscoreboard.service.OnGoingMatchesService;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,8 +16,14 @@ import java.util.Map;
 
 @WebServlet(name = "NewMatchServlet", urlPatterns = "/new-match")
 public class NewMatchServlet extends HttpServlet {
-    NewMatchService newMatchService = new NewMatchService();
-    OnGoingMatchesService onGoingMatchesService = new OnGoingMatchesService();
+    NewMatchService newMatchService;
+    OnGoingMatchesService onGoingMatchesService;
+
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        newMatchService = (NewMatchService) config.getServletContext().getAttribute("newMatchService");
+        onGoingMatchesService = (OnGoingMatchesService) config.getServletContext().getAttribute("onGoingMatchesService");
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
