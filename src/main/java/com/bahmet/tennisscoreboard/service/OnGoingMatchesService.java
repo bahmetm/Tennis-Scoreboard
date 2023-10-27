@@ -18,7 +18,13 @@ public class OnGoingMatchesService {
             uuid = UUID.randomUUID().toString();
         }
 
+        onGoingMatches.put(uuid, match);
+
         return uuid;
+    }
+
+    public Match getMatchByUUID(String uuid) {
+        return onGoingMatches.get(uuid);
     }
 
     public Match get(String uuid) {
