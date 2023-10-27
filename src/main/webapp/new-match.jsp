@@ -15,9 +15,9 @@
 <div class="wrapper">
     <header>
         <nav>
-            <a href="@">home</a>
-            <a href="@">new match</a>
-            <a href="@">matches</a>
+            <a href="/">home</a>
+            <a href="new-match">new match</a>
+            <a href="matches">matches</a>
         </nav>
     </header>
 

@@ -1,16 +1,20 @@
 main {
-    height: 350px;
     width: 550px;
 }
 
-.point-buttons-wrapper {
+h1 {
+    margin-bottom: 25px;
+}
+
+#wrapper-input-form {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
 
-.input-type {
+
+.button {
     border: none;
     font-size: 18px;
     background-color: #ffffff;
@@ -23,40 +27,40 @@ main {
 }
 
 
-table {
+
+
+.tie-break-table {
     width: 100%;
+    margin-bottom: 25px;
 }
 
-table tr {
+.tie-break-table thead {
+    background-color:  rgb(0, 0, 0, 0.05);
+}
+
+.tie-break-table tr {
     height: 40px;
 }
 
-table thead:first-child {
-    height: 30px;
-    /* border-bottom: 1pt solid rgb(165, 165, 165); */
-}
-
-table th {
-    background-color:  rgb(0, 0, 0, 0.05);
-    text-align: start;
+.tie-break-table thead {
     font-weight: 700;
-    font-size: 17px;
 }
 
-table th, table td {
+.tie-break-table td {
     vertical-align: middle;
 }
 
-table td:not(table td:last-child) {
+.tie-break-table p {
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+.tie-break-table td:not(.tie-break-table td:last-child) {
     border-right: 1pt solid  rgb(0, 0, 0, 0.05);
 }
 
-table tr:not(table tr:last-child) {
-    border-bottom: 1pt solid  rgb(0, 0, 0, 0.05);
-}
-
-
-table p {
-    margin-left: 5px;
-    font-size: 18px;
+h3 {
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 25px;
 }
