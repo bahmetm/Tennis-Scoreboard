@@ -2,12 +2,10 @@ package com.bahmet.tennisscoreboard.dao;
 
 
 import com.bahmet.tennisscoreboard.exception.DatabaseException;
-import com.bahmet.tennisscoreboard.exception.PlayerNameAlreadyExistsException;
 import com.bahmet.tennisscoreboard.model.Player;
 import com.bahmet.tennisscoreboard.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.exception.ConstraintViolationException;
 
 public class PlayerDAO {
     public Player findByName(String name) {
